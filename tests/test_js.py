@@ -38,7 +38,7 @@ class TestJs(RecurlyTest):
             '015662c92688f387159bcac9bc1fb250a1327886|nonce=1&timestamp=1312701386'
         )
         self.assertEqual(
-            recurly21.js.sign(recurly.Account(account_code='1'), {'timestamp': 1312701386, 'nonce': 1}),
+            recurly21.js.sign(recurly21.Account(account_code='1'), {'timestamp': 1312701386, 'nonce': 1}),
             '82bcbbd4deb8b1b663b7407d9085dc67e2922df7|account%5Baccount_code%5D=1&nonce=1&timestamp=1312701386'
         )
 
