@@ -12,9 +12,9 @@ from xml.etree import ElementTree
 import iso8601
 import backports.ssl_match_hostname
 
-import recurly
-import recurly.errors
-from recurly.link_header import parse_link_value
+import recurly21 as recurly
+import recurly21.errors
+from recurly21.link_header import parse_link_value
 
 
 class Money(object):
@@ -635,7 +635,7 @@ class Resource(object):
         reaction to the given `httplib.HTTPResponse`."""
         response_xml = response.read()
         logging.getLogger('recurly.http.response').debug(response_xml)
-        exc_class = recurly.errors.error_class_for_http_status(response.status)
+        exc_class = recurly21.errors.error_class_for_http_status(response.status)
         raise exc_class(response_xml)
 
     def to_element(self):

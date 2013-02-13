@@ -8,7 +8,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as README:
 VERSION_RE = re.compile("^__version__ = '(.+)'$",
                         flags=re.MULTILINE)
 with open(os.path.join(os.path.dirname(__file__),
-                       'recurly', '__init__.py')) as PACKAGE:
+                       'recurly21', '__init__.py')) as PACKAGE:
     VERSION = VERSION_RE.search(PACKAGE.read()).group(1)
 
 more_install_requires = list()
@@ -18,7 +18,7 @@ except ImportError:
     more_install_requires.append('ssl')
 
 setup(
-    name='recurly',
+    name='recurly21',
     version=VERSION,
     description="Interact with Recurly's REST API for subscription management from your Python website",
     long_description=DESCRIPTION,
@@ -34,7 +34,7 @@ setup(
         'Programming Language :: Python',
         'Topic :: Internet :: WWW/HTTP',
     ],
-    packages=['recurly'],
+    packages=['recurly21'],
     install_requires=['iso8601', 'backports.ssl_match_hostname'] + more_install_requires,
     tests_require=['mock',
                    'unittest2'],

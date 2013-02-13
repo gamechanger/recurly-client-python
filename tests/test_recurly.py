@@ -7,17 +7,17 @@ from recurlytests import xml
 class TestRecurly(unittest.TestCase):
 
     def test_hello(self):
-        import recurly
+        import recurly21 as recurly
 
     def test_xml(self):
-        import recurly
+        import recurly21 as recurly
         account = recurly.Account()
         account.username = 'importantbreakfast'
         account_xml = ElementTree.tostring(account.to_element(), encoding='UTF-8')
         self.assertEqual(account_xml, xml('<account><username>importantbreakfast</username></account>'))
 
     def test_objects_for_push_notification(self):
-        import recurly
+        import recurly21 as recurly
 
         objs = recurly.objects_for_push_notification("""<?xml version="1.0" encoding="UTF-8"?>
         <new_subscription_notification>

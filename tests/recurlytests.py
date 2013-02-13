@@ -78,7 +78,7 @@ class MockRequestManager(object):
     def assert_request(self):
         headers = dict(self.headers)
         if 'User-Agent' in headers:
-            import recurly
+            import recurly21 as recurly
             headers['User-Agent'] = headers['User-Agent'].replace('{version}', recurly.__version__)
         self.request_mock.assert_called_once_with(self.method, self.uri, self.body, headers)
 
@@ -112,7 +112,7 @@ class RecurlyTest(unittest.TestCase):
         time.sleep(secs)
 
     def setUp(self):
-        import recurly
+        import recurly21 as recurly
 
         # Mock everything out unless we have an API key.
         try:
