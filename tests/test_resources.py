@@ -5,9 +5,9 @@ import time
 from urlparse import urljoin
 from xml.etree import ElementTree
 
-import recurly
-from recurly import Account, AddOn, Adjustment, BillingInfo, Coupon, Plan, Redemption, Subscription, SubscriptionAddOn, Transaction
-from recurly import Money, NotFoundError, ValidationError, BadRequestError, PageError
+import recurly21 as recurly
+from recurly21 import Account, AddOn, Adjustment, BillingInfo, Coupon, Plan, Redemption, Subscription, SubscriptionAddOn, Transaction
+from recurly21 import Money, NotFoundError, ValidationError, BadRequestError, PageError
 from recurlytests import RecurlyTest, xml
 
 

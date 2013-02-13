@@ -3,9 +3,9 @@ from urllib import urlencode
 from urlparse import urljoin
 from xml.etree import ElementTree
 
-import recurly.js as js
-from recurly.errors import *
-from recurly.resource import Resource, Money, PageError
+import recurly21.js as js
+from recurly21.errors import *
+from recurly21.resource import Resource, Money, PageError
 
 
 """

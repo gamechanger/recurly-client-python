@@ -7,7 +7,7 @@ import time
 import urllib
 from urlparse import urlsplit, urljoin
 
-import recurly
+import recurly21 as recurly
 
 
 PRIVATE_KEY = None
